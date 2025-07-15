@@ -147,167 +147,184 @@ export const mockPieData = [
   },
 ];
 
-export const mockLineData = [
-  {
-    id: "japan",
-    color: tokens("dark").greenAccent[500],
-    data: [
-      {
-        x: "plane",
-        y: 101,
-      },
-      {
-        x: "helicopter",
-        y: 75,
-      },
-      {
-        x: "boat",
-        y: 36,
-      },
-      {
-        x: "train",
-        y: 216,
-      },
-      {
-        x: "subway",
-        y: 35,
-      },
-      {
-        x: "bus",
-        y: 236,
-      },
-      {
-        x: "car",
-        y: 88,
-      },
-      {
-        x: "moto",
-        y: 232,
-      },
-      {
-        x: "bicycle",
-        y: 281,
-      },
-      {
-        x: "horse",
-        y: 1,
-      },
-      {
-        x: "skateboard",
-        y: 35,
-      },
-      {
-        x: "others",
-        y: 14,
-      },
-    ],
-  },
-  {
-    id: "france",
-    color: tokens("dark").blueAccent[300],
-    data: [
-      {
-        x: "plane",
-        y: 212,
-      },
-      {
-        x: "helicopter",
-        y: 190,
-      },
-      {
-        x: "boat",
-        y: 270,
-      },
-      {
-        x: "train",
-        y: 9,
-      },
-      {
-        x: "subway",
-        y: 75,
-      },
-      {
-        x: "bus",
-        y: 175,
-      },
-      {
-        x: "car",
-        y: 33,
-      },
-      {
-        x: "moto",
-        y: 189,
-      },
-      {
-        x: "bicycle",
-        y: 97,
-      },
-      {
-        x: "horse",
-        y: 87,
-      },
-      {
-        x: "skateboard",
-        y: 299,
-      },
-      {
-        x: "others",
-        y: 251,
-      },
-    ],
-  },
-  {
-    id: "us",
-    color: tokens("dark").redAccent[200],
-    data: [
-      {
-        x: "plane",
-        y: 191,
-      },
-      {
-        x: "helicopter",
-        y: 136,
-      },
-      {
-        x: "boat",
-        y: 91,
-      },
-      {
-        x: "train",
-        y: 190,
-      },
-      {
-        x: "subway",
-        y: 211,
-      },
-      {
-        x: "bus",
-        y: 152,
-      },
-      {
-        x: "car",
-        y: 189,
-      },
-      {
-        x: "moto",
-        y: 152,
-      },
-      {
-        x: "bicycle",
-        y: 8,
-      },
-      {
-        x: "horse",
-        y: 197,
-      },
-      {
-        x: "skateboard",
-        y: 107,
-      },
-      {
-        x: "others",
-        y: 170,
-      },
-    ],
-  },
-];
+export const mockLineData = {
+  2023: [
+    {
+      year: 2023,
+      id: "AI Software",
+      color: "#ff6b6b",
+      data: [
+        { x: "Jan", y: 10 },
+        { x: "Feb", y: 12 },
+        { x: "Mar", y: 15 },
+        { x: "Apr", y: 20 },
+        { x: "May", y: 18 },
+        { x: "Jun", y: 14 },
+        { x: "Jul", y: 22 },
+        { x: "Aug", y: 25 },
+        { x: "Sep", y: 19 },
+        { x: "Oct", y: 23 },
+        { x: "Nov", y: 21 },
+        { x: "Dec", y: 17 },
+      ],
+    },
+    {
+      year: 2023,
+      id: "Cybersecurity Software",
+      color: "#4dabf7",
+      data: [
+        { x: "Jan", y: 7 },
+        { x: "Feb", y: 9 },
+        { x: "Mar", y: 11 },
+        { x: "Apr", y: 14 },
+        { x: "May", y: 13 },
+        { x: "Jun", y: 10 },
+        { x: "Jul", y: 12 },
+        { x: "Aug", y: 14 },
+        { x: "Sep", y: 12 },
+        { x: "Oct", y: 11 },
+        { x: "Nov", y: 9 },
+        { x: "Dec", y: 8 },
+      ],
+    },
+    {
+      year: 2023,
+      id: "Full-Stack Software",
+      color: "#69db7c",
+      data: [
+        { x: "Jan", y: 13 },
+        { x: "Feb", y: 14 },
+        { x: "Mar", y: 16 },
+        { x: "Apr", y: 18 },
+        { x: "May", y: 20 },
+        { x: "Jun", y: 22 },
+        { x: "Jul", y: 25 },
+        { x: "Aug", y: 24 },
+        { x: "Sep", y: 21 },
+        { x: "Oct", y: 20 },
+        { x: "Nov", y: 18 },
+        { x: "Dec", y: 19 },
+      ],
+    },
+  ],
+  2024: [
+    {
+      year: 2024,
+      id: "AI Software",
+      color: "#ff6b6b",
+      data: [
+        { x: "Jan", y: 14 },
+        { x: "Feb", y: 16 },
+        { x: "Mar", y: 19 },
+        { x: "Apr", y: 22 },
+        { x: "May", y: 20 },
+        { x: "Jun", y: 18 },
+        { x: "Jul", y: 25 },
+        { x: "Aug", y: 27 },
+        { x: "Sep", y: 23 },
+        { x: "Oct", y: 22 },
+        { x: "Nov", y: 20 },
+        { x: "Dec", y: 21 },
+      ],
+    },
+    {
+      year: 2024,
+      id: "Cybersecurity Software",
+      color: "#4dabf7",
+      data: [
+        { x: "Jan", y: 9 },
+        { x: "Feb", y: 10 },
+        { x: "Mar", y: 12 },
+        { x: "Apr", y: 15 },
+        { x: "May", y: 13 },
+        { x: "Jun", y: 14 },
+        { x: "Jul", y: 15 },
+        { x: "Aug", y: 16 },
+        { x: "Sep", y: 14 },
+        { x: "Oct", y: 13 },
+        { x: "Nov", y: 12 },
+        { x: "Dec", y: 11 },
+      ],
+    },
+    {
+      year: 2024,
+      id: "Full-Stack Software",
+      color: "#69db7c",
+      data: [
+        { x: "Jan", y: 18 },
+        { x: "Feb", y: 20 },
+        { x: "Mar", y: 22 },
+        { x: "Apr", y: 23 },
+        { x: "May", y: 25 },
+        { x: "Jun", y: 27 },
+        { x: "Jul", y: 29 },
+        { x: "Aug", y: 28 },
+        { x: "Sep", y: 26 },
+        { x: "Oct", y: 25 },
+        { x: "Nov", y: 23 },
+        { x: "Dec", y: 22 },
+      ],
+    },
+  ],
+  2025: [
+    {
+      year: 2025,
+      id: "AI Software",
+      color: "#ff6b6b",
+      data: [
+        { x: "Jan", y: 22 },
+        { x: "Feb", y: 24 },
+        { x: "Mar", y: 26 },
+        { x: "Apr", y: 28 },
+        { x: "May", y: 30 },
+        { x: "Jun", y: 33 },
+        { x: "Jul", y: 34 },
+        { x: "Aug", y: 35 },
+        { x: "Sep", y: 33 },
+        { x: "Oct", y: 31 },
+        { x: "Nov", y: 29 },
+        { x: "Dec", y: 28 },
+      ],
+    },
+    {
+      year: 2025,
+      id: "Cybersecurity Software",
+      color: "#4dabf7",
+      data: [
+        { x: "Jan", y: 12 },
+        { x: "Feb", y: 13 },
+        { x: "Mar", y: 15 },
+        { x: "Apr", y: 16 },
+        { x: "May", y: 15 },
+        { x: "Jun", y: 16 },
+        { x: "Jul", y: 17 },
+        { x: "Aug", y: 18 },
+        { x: "Sep", y: 17 },
+        { x: "Oct", y: 16 },
+        { x: "Nov", y: 15 },
+        { x: "Dec", y: 14 },
+      ],
+    },
+    {
+      year: 2025,
+      id: "Full-Stack Software",
+      color: "#69db7c",
+      data: [
+        { x: "Jan", y: 24 },
+        { x: "Feb", y: 26 },
+        { x: "Mar", y: 28 },
+        { x: "Apr", y: 30 },
+        { x: "May", y: 33 },
+        { x: "Jun", y: 35 },
+        { x: "Jul", y: 36 },
+        { x: "Aug", y: 35 },
+        { x: "Sep", y: 33 },
+        { x: "Oct", y: 31 },
+        { x: "Nov", y: 29 },
+        { x: "Dec", y: 27 },
+      ],
+    },
+  ],
+};
+
+
