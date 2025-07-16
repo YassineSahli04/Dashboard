@@ -42,8 +42,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #3051b4;
+  background-color: #1100ff;
   border-radius: 10px;
+  z-index: 1;
 }
 .grid-chart-bar .bar-item2 {
   position: absolute;
@@ -51,12 +52,35 @@
   left: 0;
   width: 100%;
   height: 0;
-  background-color: #87a5feb4;
+  background-color: #7a8bbe;
   border-radius: 10px;
+  z-index: 2;
 }
 .grid-chart-bar:nth-child(3) .bar-wrapper .bar-item1 {
   z-index: 1;
 }
+.chart-legend {
+  display: flex;
+  gap: 20px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
 
 @media screen and (max-width: 992px) {
   .grid-c3 {

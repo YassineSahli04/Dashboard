@@ -82,36 +82,9 @@ export const mockBarData = [
 ];
 
 export const mockReportData = [
-    {
-        id: 14,
-        month: "Jan",
-        value1: 45,
-        value2: null
-    },
-    {
-        id: 15,
-        month: "Feb",
-        value1: 45,
-        value2: 60
-    },
-    {
-        id: 16,
-        month: "Mar",
-        value1: 45,
-        value2: null
-    },
-    {
-        id: 17,
-        month: "Apr",
-        value1: 45,
-        value2: null
-    },
-    {
-        id: 18,
-        month: "May",
-        value1: 45,
-        value2: null
-    }
+  { id: "AI Software",         value1: 210,  value2: 220 },
+  { id: "Cybersecurity Software", value1: 180,  value2: 190 },
+  { id: "Fullstack Software",  value1: 170,  value2: 180 }
 ];
 
 export const mockPieData = {
