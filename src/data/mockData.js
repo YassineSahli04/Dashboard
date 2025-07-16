@@ -114,38 +114,52 @@ export const mockReportData = [
     }
 ];
 
-export const mockPieData = [
-  {
-    id: "hack",
-    label: "hack",
-    value: 239,
-    color: "hsl(104, 70%, 50%)",
-  },
-  {
-    id: "make",
-    label: "make",
-    value: 170,
-    color: "hsl(162, 70%, 50%)",
-  },
-  {
-    id: "go",
-    label: "go",
-    value: 322,
-    color: "hsl(291, 70%, 50%)",
-  },
-  {
-    id: "lisp",
-    label: "lisp",
-    value: 503,
-    color: "hsl(229, 70%, 50%)",
-  },
-  {
-    id: "scala",
-    label: "scala",
-    value: 584,
-    color: "hsl(344, 70%, 50%)",
-  },
-];
+export const mockPieData = {
+  "AI Software": [
+    {
+      id: "open",
+      label: "Open Positions",
+      value: 1000000,
+      color: "hsl(200, 70%, 50%)",
+    },
+    {
+      id: "seekers",
+      label: "Job Seekers",
+      value: 100000,
+      color: "hsl(100, 70%, 50%)",
+    },
+  ],
+  "Cybersecurity Software": [
+    {
+      id: "open",
+      label: "Open Positions",
+      value: 500000,
+      color: "hsl(0, 70%, 50%)",
+    },
+    {
+      id: "seekers",
+      label: "Job Seekers",
+      value: 75000,
+      color: "hsl(40, 70%, 50%)",
+    },
+  ],
+  "Fullstack Software": [
+    {
+      id: "open",
+      label: "Open Positions",
+      value: 350000,
+      color: "hsl(290, 70%, 50%)",
+    },
+    {
+      id: "seekers",
+      label: "Job Seekers",
+      value: 60000,
+      color: "hsl(170, 70%, 50%)",
+    },
+  ],
+};
+
+
 
 export const mockLineData = {
   2023: [

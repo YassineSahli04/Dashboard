@@ -11,6 +11,7 @@ import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
 import Report from "../../components/Report/Report";
+import PieChart from "../../components/PieChart";
 
 
 const Dashboard = () => {
@@ -127,8 +128,9 @@ const Dashboard = () => {
         {/* ROW 2 */}
         <Box
           gridColumn="span 8"
-          gridRow="span 2"
+          gridRow="span 3"
           backgroundColor={colors.primary[400]}
+
         >
           <LineChart />  
         </Box>
@@ -136,31 +138,14 @@ const Dashboard = () => {
 
         {/* ROW 3 */}
         <Box
-          gridColumn="span 4"
-          gridRow="span 2"
+          gridColumn="span 7"
+          gridRow="span 3"
           backgroundColor={colors.primary[400]}
           p="30px"
-        >
-          <Typography variant="h5" fontWeight="600">
-            Campaign
-          </Typography>
-          <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            mt="25px"
-          >
-            <ProgressCircle size="125" />
-            <Typography
-              variant="h5"
-              color={colors.greenAccent[500]}
-              sx={{ mt: "15px" }}
-            >
-              $48,352 revenue generated
-            </Typography>
-            <Typography>Includes extra misc expenditures and costs</Typography>
-          </Box>
+        > 
+        <PieChart/>
         </Box>
+                    
         <Box
           gridColumn="span 4"
           gridRow="span 2"

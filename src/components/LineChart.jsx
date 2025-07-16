@@ -71,7 +71,7 @@ export default function LineChart({ isCustomLineColors = false}){
 </Box>
 
   </Box>
-  <Box height="250px" m="-20px 0 0 0">
+  <Box height="350px" m="-20px 0 0 0" paddingLeft="25px">
         <ResponsiveLine 
         data={data[selectedYear]}
         theme={{
@@ -84,6 +84,7 @@ export default function LineChart({ isCustomLineColors = false}){
             legend: {
               text: {
                 fill: colors.grey[100],
+                fontSize: 16,
               },
             },
             ticks: {
@@ -99,6 +100,7 @@ export default function LineChart({ isCustomLineColors = false}){
           legends: {
             text: {
               fill: colors.grey[100],
+              fontSize: 14,
             },
           },
           tooltip: {
@@ -131,12 +133,12 @@ export default function LineChart({ isCustomLineColors = false}){
           legendPosition: "middle",
         }}
         axisLeft={{
+          legend:"Open Positions (in thousands)",
           orient: "left",
           tickValues: 10,
           tickSize: 3,
           tickPadding: 5,
           tickRotation: 0,
-          legend: undefined,
           legendOffset: -40,
           legendPosition: "middle",
         }}
@@ -150,12 +152,12 @@ export default function LineChart({ isCustomLineColors = false}){
         useMesh={true}
         legends={[
           {
-            anchor: "bottom-right",
-            direction: "column",
+            anchor: "bottom",
+            direction: "row",
             justify: false,
-            translateX: 100,
-            translateY: 0,
-            itemsSpacing: 0,
+            translateX: 0,
+            translateY: 50,  
+            itemsSpacing: 100,
             itemDirection: "left-to-right",
             itemWidth: 80,
             itemHeight: 20,
