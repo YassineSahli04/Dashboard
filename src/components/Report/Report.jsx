@@ -68,15 +68,15 @@ const Report = () => {
                 
             </div>
             <div className="chart-legend">
-  <div className="legend-item">
-    <span className="legend-color" style={{ backgroundColor: "#1100ff" }}></span>
-    <span>2025</span>
-  </div>
-  <div className="legend-item">
-    <span className="legend-color" style={{ backgroundColor: "#87a5feb4" }}></span>
-    <span>2024</span>
-  </div>
-</div>
+                <div className="legend-item">
+                    <span className="legend-color" style={{ backgroundColor: "#1100ff" }}></span>
+                    <span>2025</span>
+                </div>
+                <div className="legend-item">
+                    <span className="legend-color" style={{ backgroundColor: "#87a5feb4" }}></span>
+                    <span>2024</span>
+                </div>
+            </div>
         </div>
     </div>
   )

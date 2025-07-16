@@ -30,6 +30,7 @@ const BarChart = ({ isDashboard = false }) => {
             },
             text: {
               fill: colors.grey[100],
+              textAnchor: "middle",
             },
           },
         },
@@ -39,8 +40,8 @@ const BarChart = ({ isDashboard = false }) => {
           },
         },
       }}
-      keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
-      indexBy="country"
+      keys={["San Francisco", "New York", "Seattle", "Toronto", "Austin"]}
+      indexBy="field"
       margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
       padding={0.3}
       valueScale={{ type: "linear" }}
@@ -75,16 +76,13 @@ const BarChart = ({ isDashboard = false }) => {
       axisBottom={{
         tickSize: 5,
         tickPadding: 5,
-        tickRotation: 0,
-        legend: isDashboard ? undefined : "country", // changed
-        legendPosition: "middle",
-        legendOffset: 32,
+        textAnchor:"middle",
       }}
       axisLeft={{
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: isDashboard ? undefined : "food", // changed
+        legend: "Evalable Positions",
         legendPosition: "middle",
         legendOffset: -40,
       }}
