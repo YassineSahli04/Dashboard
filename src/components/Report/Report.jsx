@@ -16,7 +16,7 @@ const Report = () => {
                 maxValue = element.value1>element.value2 ? element.value1 : element.value2;
             }      
         });
-        const step = Math.round(maxValue / numTicks)+3;
+        const step = Math.round(maxValue / numTicks);
         for (let i = 0; i <= numTicks; i++) {
             yAxisListTmp.unshift(step*i)
             
