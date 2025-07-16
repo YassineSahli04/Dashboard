@@ -31,8 +31,8 @@ useEffect(() => {
   return (
     <div>
         <Box sx={{ display: "flex", alignItems: "center", justifyContent:"space-between"}}>
-          <Typography variant="h5" fontWeight="600">
-            Job Market Supply and Demand in {selectedField} Field
+          <Typography variant="h4" fontWeight="600">
+            Job Market Supply and Demand in {selectedField} Field in 2025
           </Typography>
           <Box>
             <select
