@@ -12,7 +12,7 @@ import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
 import Report from "../../components/Report/Report";
 import PieChart from "../../components/PieChart";
-
+import RadarChart from "../../components/RadarChart";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -132,9 +132,17 @@ const Dashboard = () => {
           backgroundColor={colors.primary[400]}
 
         >
-          <LineChart />  
+          <LineChart />
         </Box>
 
+        <Box
+          gridColumn="span 5"
+          gridRow="span 3"
+          backgroundColor={colors.primary[400]}
+
+        >
+          <RadarChart />
+        </Box>
 
         {/* ROW 3 */}
         <Box
@@ -142,10 +150,10 @@ const Dashboard = () => {
           gridRow="span 3"
           backgroundColor={colors.primary[400]}
           p="30px"
-        > 
-        <PieChart/>
+        >
+          <PieChart />
         </Box>
-                    
+
         <Box
           gridColumn="span 5"
           gridRow="span 2"
@@ -162,7 +170,7 @@ const Dashboard = () => {
             <BarChart isDashboard={true} />
           </Box>
         </Box>
-                <Box
+        <Box
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
@@ -175,10 +183,10 @@ const Dashboard = () => {
             Annual Salary By Field in 2024-2025
           </Typography>
           <Box height="250px" mt="-20px">
-            <Report/>
+            <Report />
           </Box>
         </Box>
-        
+
 
       </Box>
     </Box>
