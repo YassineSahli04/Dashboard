@@ -4,11 +4,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
-import Header from "../../components/Header";
 import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
-import ProgressCircle from "../../components/ProgressCircle";
 import Report from "../../components/Report/Report";
 import PieChart from "../../components/PieChart";
 import { mockLineData as lineData } from "../../data/mockData";
@@ -65,7 +63,7 @@ const Dashboard = () => {
 
   useMemo(()=>{
     let numJobSeekers = 0;
-    const itFields = ["AI Software","Cybersecurity Software","Fullstack Software"];
+    const itFields = ["aiEngineer","cybersecurityEngineer","fullstackEngineer"];
 
     itFields.forEach((field) => {
       const seekerEntry = pieData[field].find((o) => o.id === "seekers");
@@ -114,7 +112,7 @@ const Dashboard = () => {
         >
           <StatBox
             title={totalPositions*1000}
-            subtitle="Total Available IT Positions in 2025"
+            subtitle={t("totalPositions2025")}
             progress={1-(increasePositionNumPerc.toFixed(2)/100)}
             increase={`+${increasePositionNumPerc.toFixed(2)}%`}
             icon={
@@ -133,7 +131,7 @@ const Dashboard = () => {
         >
           <StatBox
             title={meanPay.toFixed(5)*1000}
-            subtitle="Mean IT Salary in 2025"
+            subtitle={t("meanSalary2025")}
             progress={1-(increasePayPerc.toFixed(2)/100)}
             increase={`+${increasePayPerc.toFixed(2)}%`}
             icon={
@@ -152,7 +150,7 @@ const Dashboard = () => {
         >
           <StatBox
             title={numItJobSeekers}
-            subtitle="Job Seekers in the IT Field"
+            subtitle={t("jobSeekersIT")}
             isProgressDisplayed={false}
             icon={
               <PersonAddIcon
@@ -170,7 +168,7 @@ const Dashboard = () => {
         >
           <StatBox
             title={numItJobsInCities}
-            subtitle="IT Jobs in the Top 5 IT Cities"
+            subtitle={t("topCitiesJobs")}
             isProgressDisplayed={false}
             icon={
               <TrafficIcon
@@ -211,7 +209,7 @@ const Dashboard = () => {
             fontWeight="600"
             sx={{ padding: "30px 30px 0 30px" }}
           >
-            Top 5 Cities Hiring in Tech (2025): AI, Cybersecurity & Fullstack Roles
+            {t("topCitiesTitle")}
           </Typography>
           <Box height="250px" mt="-20px">
             <BarChart isDashboard={true} />
@@ -227,7 +225,7 @@ const Dashboard = () => {
             fontWeight="600"
             sx={{ padding: "30px 30px 0 30px" }}
           >
-            Annual Salary By Field in 2024-2025
+            {t("annualSalaryTitle")}
           </Typography>
           <Box height="250px" mt="-20px">
             <Report/>

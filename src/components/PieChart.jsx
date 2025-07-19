@@ -1,14 +1,30 @@
 import { ResponsivePie } from "@nivo/pie";
 import { tokens } from "../theme";
 import { mockPieData as data } from "../data/mockData";
-import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import {useState , useEffect} from "react";
+import { useTranslation } from 'react-i18next';
 
 const PieChart = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [selectedField, setSelectedField] = useState("Fullstack Software");
+  const [selectedField, setSelectedField] = useState("aiEngineer");
   const [processedData, setProcessedData] = useState({});
+  const { t } = useTranslation();
+
+    const legendItems = [
+    {
+      id: "open",
+      label: t("open"),
+      color: "#F47560"
+    },
+    {
+      id: "seekers",
+      label: t("seekers"),
+      color: "#E8C1A0"
+    }
+  ];
+
 
   const handleChange = (e) => {
     setSelectedField(e.target.value);
@@ -32,7 +48,7 @@ useEffect(() => {
     <div>
         <Box sx={{ display: "flex", alignItems: "center", justifyContent:"space-between"}}>
           <Typography variant="h4" fontWeight="600">
-            Job Market Supply and Demand in {selectedField} Field in 2025
+            { t("supplyDemandTitleStart") + t(selectedField) + t("supplyDemandTitleEnd")}
           </Typography>
           <Box>
             <select
@@ -46,9 +62,9 @@ useEffect(() => {
                 outline: "none",
               }}
             >
-              {Object.keys(data).map((year) => (
-                <option value={year} key={year}>
-                  {year}
+              {Object.keys(data).map((opt) => (
+                <option value={opt} key={opt}>
+                  {t(opt)}
                 </option>
               ))}
             </select>
@@ -108,6 +124,7 @@ useEffect(() => {
                   from: "color",
                   modifiers: [["darker", 0.2]],
                 }}
+                arcLinkLabel={(d) => t(d.id)}
                 arcLinkLabelsSkipAngle={10}
                 arcLinkLabelsTextColor={colors.grey[100]}
                 arcLinkLabelsThickness={2}
@@ -153,6 +170,11 @@ useEffect(() => {
                     itemOpacity: 1,
                     symbolSize: 18,
                     symbolShape: "circle",
+                    data: legendItems.map(item => ({
+                      id: item.label,
+                      label: item.label,
+                      color: item.color
+                    })),
                     effects: [
                       {
                         on: "hover",
