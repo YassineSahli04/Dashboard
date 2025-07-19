@@ -1,12 +1,15 @@
 import "./Report.css";
 import { mockReportData as reportData } from "../../data/mockData";
 import {useEffect, useState} from "react"
+import { useTranslation } from 'react-i18next';
 
 const Report = () => {
     const [maxChartVal,setMaxChartVal] = useState(0);
     const [yAxisList, setYAxisList] = useState([]);
     const [processedData,setProcessedData] = useState([]);
     const numTicks = 5;
+    const { t } = useTranslation();
+    
 
     useEffect(()=>{
         let maxValue = 0;
@@ -61,7 +64,7 @@ const Report = () => {
                                 <div className="bar-item2" style={{ height: report.percVal1 }}></div>
                                 <div className="bar-item1" style={{ height:report.percVal2}}></div>
                             </div>
-                            <span className="grid-hortz-value">{report.id}</span>
+                            <span className="grid-hortz-value">{t(report.id)}</span>
                         </div>
                     ))
                 }

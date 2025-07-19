@@ -3,12 +3,32 @@ import { tokens } from "../theme";
 import {useState, useMemo} from  "react"
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { mockLineData as data } from "../data/mockData";
+import { useTranslation } from 'react-i18next';
 
 export default function LineChart({ isCustomLineColors = false}){
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [selectedYear, setSelectedYear] = useState("2023");
-  const [totalPositions, setTotalPositions] = useState(0)
+  const [totalPositions, setTotalPositions] = useState(0);
+  const { t } = useTranslation();
+
+  const legendItems = [
+    {
+      id: "aiEngineer",
+      label: t("aiEngineer"),
+      color: "#e15759"
+    },
+    {
+      id: "cybersecurityEngineer",
+      label: t("cybersecurityEngineer"),
+      color: "#4e79a7"
+    },
+    {
+      id: "fullstackEngineer",
+      label: t("fullstackEngineer"),
+      color: "#59a14f"
+    }
+  ];
 
   const handleChange = (e) => {
     setSelectedYear(e.target.value);
@@ -40,14 +60,14 @@ export default function LineChart({ isCustomLineColors = false}){
         fontWeight="600"
         color={colors.grey[100]}
       >
-        Available positions for each field in {selectedYear}
+        {t("availablePositionsIn") + " " + selectedYear}
       </Typography>
       <Typography
         variant="h4"
         fontWeight="bold"
         color={colors.greenAccent[500]}
       >
-      {totalPositions*1000} Total Positions
+      {totalPositions*1000 + " " + t("totalPositions")}
       </Typography>
     </Box>
 <Box sx={{ mt: 2 }}>
@@ -133,7 +153,7 @@ export default function LineChart({ isCustomLineColors = false}){
           legendPosition: "middle",
         }}
         axisLeft={{
-          legend:"Open Positions (in thousands)",
+          legend:t("openPositions"),
           orient: "left",
           tickValues: 10,
           tickSize: 3,
@@ -157,14 +177,19 @@ export default function LineChart({ isCustomLineColors = false}){
             justify: false,
             translateX: 0,
             translateY: 50,  
-            itemsSpacing: 100,
+            itemsSpacing: 0,
             itemDirection: "left-to-right",
-            itemWidth: 80,
+            itemWidth: 200,
             itemHeight: 20,
             itemOpacity: 0.75,
             symbolSize: 12,
             symbolShape: "circle",
             symbolBorderColor: "rgba(0, 0, 0, .5)",
+            data: legendItems.map(item => ({
+              id: item.label,
+              label: item.label,
+              color: item.color
+            })),
             effects: [
               {
                 on: "hover",
@@ -176,6 +201,7 @@ export default function LineChart({ isCustomLineColors = false}){
             ],
           },
         ]}
+        
         />
     </Box>
     </>

@@ -83,16 +83,14 @@ export const mockBarData = [
   }
 ];
 
-
-
 export const mockReportData = [
-  { id: "AI Software", value1: 210, value2: 220 },
-  { id: "Cybersecurity Software", value1: 180, value2: 190 },
-  { id: "Fullstack Software", value1: 170, value2: 180 }
+  { id: "aiEngineer",         value1: 210,  value2: 220 },
+  { id: "cybersecurityEngineer", value1: 180,  value2: 190 },
+  { id: "fullstackEngineer",  value1: 170,  value2: 180 }
 ];
 
 export const mockPieData = {
-  "AI Software": [
+  "aiEngineer": [
     {
       id: "open",
       label: "Open Positions",
@@ -106,7 +104,7 @@ export const mockPieData = {
       color: "hsl(100, 70%, 50%)",
     },
   ],
-  "Cybersecurity Software": [
+  "cybersecurityEngineer": [
     {
       id: "open",
       label: "Open Positions",
@@ -120,7 +118,7 @@ export const mockPieData = {
       color: "hsl(40, 70%, 50%)",
     },
   ],
-  "Fullstack Software": [
+  "fullstackEngineer": [
     {
       id: "open",
       label: "Open Positions",
@@ -136,13 +134,11 @@ export const mockPieData = {
   ],
 };
 
-
-
 export const mockLineData = {
   2023: [
     {
       year: 2023,
-      id: "AI Software",
+      id: "aiEngineer",
       color: "#ff6b6b",
       data: [
         { x: "Jan", y: 10 },
@@ -161,7 +157,7 @@ export const mockLineData = {
     },
     {
       year: 2023,
-      id: "Cybersecurity Software",
+      id: "cybersecurityEngineer",
       color: "#4dabf7",
       data: [
         { x: "Jan", y: 7 },
@@ -180,7 +176,7 @@ export const mockLineData = {
     },
     {
       year: 2023,
-      id: "Full-Stack Software",
+      id: "fullstackEngineer",
       color: "#69db7c",
       data: [
         { x: "Jan", y: 13 },
