@@ -1,6 +1,5 @@
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
-import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
@@ -17,6 +16,7 @@ import { mockReportData as reportData } from "../../data/mockData";
 import { mockPieData as pieData } from "../../data/mockData";
 import { mockBarData as barData } from "../../data/mockData";
 import {useMemo, useState} from "react";
+import { useTranslation } from 'react-i18next';
 
 
 const Dashboard = () => {
@@ -28,6 +28,7 @@ const Dashboard = () => {
   const [meanPay, setMeanPay] = useState(0);
   const [numItJobSeekers, setNumItJobSeekers] = useState(0);
   const [numItJobsInCities, setNumItJobsInCities] = useState(0);
+  const { t } = useTranslation();
 
 
   useMemo(()=>{
@@ -94,10 +95,7 @@ const Dashboard = () => {
 
   return (
     <Box m="20px">
-      {/* HEADER */}
-      <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-      </Box>
+
 
       {/* GRID & CHARTS */}
       <Box
