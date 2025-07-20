@@ -5,7 +5,7 @@ import Dashboard from "./scenes/dashboard";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import './i18n';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -17,10 +17,13 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <div className="app">
-            <Sidebar isSidebar={isSidebar}/>
+            <Sidebar isSidebar={isSidebar} />
             <main className="content">
               <Topbar setIsSidebar={setIsSidebar} />
-                <Dashboard />
+
+              <Routes>
+                <Route path="/" element={<Dashboard />} />
+              </Routes>
             </main>
           </div>
         </ThemeProvider>
