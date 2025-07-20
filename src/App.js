@@ -12,7 +12,7 @@ function App() {
   const [isSidebar, setIsSidebar] = useState(true);
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename="/Dashboard">
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
