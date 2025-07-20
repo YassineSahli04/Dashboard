@@ -13,6 +13,8 @@ import {
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
 import { mockRadarData } from "../data/mockData";
+import { useTranslation } from 'react-i18next';
+
 
 ChartJS.register(
   RadialLinearScale,
@@ -28,6 +30,13 @@ const RadarChart = () => {
   const colors = tokens(theme.palette.mode);
   const [selectedField, setSelectedField] = useState("AI Engineer");
   const chartData = mockRadarData[selectedField];
+  const { t } = useTranslation();
+
+  const tickLabelMap = {
+      "AI Engineer": t("aiEngineer"),
+      "Cybersecurity Analyst": t("cybersecurityEngineer"),
+      "Fullstack Developer": t("fullstackEngineer"),
+    };
 
   const handleChange = (e) => {
     setSelectedField(e.target.value);
@@ -58,6 +67,8 @@ const RadarChart = () => {
     plugins: {
       legend: {
         labels: {
+          boxWidth: 12,
+          maxWidth: 120,
           color: colors.grey[100],
           font: {
             size: 14,
@@ -79,7 +90,7 @@ const RadarChart = () => {
           color={colors.grey[100]}
           fontSize='20px'
         >
-          Top 6 skills in {selectedField}
+          {t('topSkills') + tickLabelMap[selectedField]}
         </Typography>
 
         <Box sx={{ mt: 2 }}>
@@ -97,7 +108,7 @@ const RadarChart = () => {
           >
             {Object.keys(mockRadarData).map((field) => (
               <option value={field} key={field}>
-                {field}
+                {tickLabelMap[field]}
               </option>
             ))}
           </select>
@@ -108,10 +119,16 @@ const RadarChart = () => {
         flexDirection="column"
         alignItems="center"
         mt="25px"
+      position="relative"
+      overflow="hidden"
+      width="100%"
+      height="100%"
       >
-        <div style={{ height: "250px", width: "400px" }}>
-          <Radar data={chartData} options={options} />
-        </div>
+        
+  <div style={{  width: "50%", height: "50%", position: "relative" }}>
+    <Radar data={chartData} options={options} />
+  </div>
+
       </Box>
     </>
 
