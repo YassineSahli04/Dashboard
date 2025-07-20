@@ -9,6 +9,10 @@ import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import Report from "../../components/Report/Report";
 import PieChart from "../../components/PieChart";
+import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import PersonSearchIcon from '@mui/icons-material/PersonSearch';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
 import RadarChart from "../../components/RadarChart";import { mockLineData as lineData } from "../../data/mockData";
 import { mockReportData as reportData } from "../../data/mockData";
 import { mockPieData as pieData } from "../../data/mockData";
@@ -116,7 +120,7 @@ const Dashboard = () => {
             progress={1-(increasePositionNumPerc.toFixed(2)/100)}
             increase={`+${increasePositionNumPerc.toFixed(2)}%`}
             icon={
-              <EmailIcon
+              <WorkOutlineIcon
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
               />
             }
@@ -135,7 +139,7 @@ const Dashboard = () => {
             progress={1-(increasePayPerc.toFixed(2)/100)}
             increase={`+${increasePayPerc.toFixed(2)}%`}
             icon={
-              <PointOfSaleIcon
+              <AttachMoneyIcon
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
               />
             }
@@ -153,7 +157,7 @@ const Dashboard = () => {
             subtitle={t("jobSeekersIT")}
             isProgressDisplayed={false}
             icon={
-              <PersonAddIcon
+              <PersonSearchIcon
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
               />
             }
@@ -171,7 +175,7 @@ const Dashboard = () => {
             subtitle={t("topCitiesJobs")}
             isProgressDisplayed={false}
             icon={
-              <TrafficIcon
+              <LocationCityIcon
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
               />
             }
