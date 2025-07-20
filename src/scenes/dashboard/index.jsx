@@ -9,7 +9,7 @@ import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import Report from "../../components/Report/Report";
 import PieChart from "../../components/PieChart";
-import { mockLineData as lineData } from "../../data/mockData";
+import RadarChart from "../../components/RadarChart";import { mockLineData as lineData } from "../../data/mockData";
 import { mockReportData as reportData } from "../../data/mockData";
 import { mockPieData as pieData } from "../../data/mockData";
 import { mockBarData as barData } from "../../data/mockData";
@@ -181,26 +181,32 @@ const Dashboard = () => {
         {/* ROW 2 */}
         <Box
           gridColumn="span 8"
-          gridRow="span 3"
+          gridRow="span 4"
           backgroundColor={colors.primary[400]}
 
-        >
-          <LineChart />  
-        </Box>
-
-
-        {/* ROW 3 */}
-        <Box
-          gridColumn="span 7"
-          gridRow="span 3"
-          backgroundColor={colors.primary[400]}
-          p="30px"
         > 
-        <PieChart/>
+          <LineChart />
         </Box>
-                    
+
         <Box
-          gridColumn="span 5"
+          gridColumn="span 4"
+          gridRow="span 2"
+          backgroundColor={colors.primary[400]}
+        >
+          <Typography
+            variant="h5"
+            fontWeight="600"
+            sx={{ padding: "30px 30px 0 30px" }}
+          >
+            {t("annualSalaryTitle")}
+          </Typography>
+          <Box height="250px" mt="-20px">
+            <Report />
+          </Box>
+        </Box>
+
+        <Box
+          gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
         >
@@ -215,23 +221,32 @@ const Dashboard = () => {
             <BarChart isDashboard={true} />
           </Box>
         </Box>
-                <Box
-          gridColumn="span 4"
-          gridRow="span 2"
+
+ 
+
+        {/* ROW 3 */}
+
+       <Box
+          gridColumn="span 5"
+          gridRow="span 3"
           backgroundColor={colors.primary[400]}
+
         >
-          <Typography
-            variant="h5"
-            fontWeight="600"
-            sx={{ padding: "30px 30px 0 30px" }}
-          >
-            {t("annualSalaryTitle")}
-          </Typography>
-          <Box height="250px" mt="-20px">
-            <Report/>
-          </Box>
+          <RadarChart />
         </Box>
+
+        <Box
+          gridColumn="span 7"
+          gridRow="span 3"
+          backgroundColor={colors.primary[400]}
+          p="30px"
+        >
+          <PieChart />
+        </Box>
+
         
+
+
 
       </Box>
     </Box>

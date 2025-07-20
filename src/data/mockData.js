@@ -1,5 +1,45 @@
 import { tokens } from "../theme";
 
+export const mockRadarData = {
+  "AI Engineer": {
+    labels: ["Python", "TensorFlow", "Data Science", "NLP", "Computer Vision", "MLOps"],
+    datasets: [
+      {
+        label: "AI Engineer",
+        data: [95, 90, 85, 80, 75, 70],
+        backgroundColor: "rgba(34, 202, 236, 0.2)",
+        borderColor: "rgba(34, 202, 236, 1)",
+        borderWidth: 2,
+
+      },
+    ],
+  },
+  "Cybersecurity Analyst": {
+    labels: ["Network Security", "Risk Assessment", "SIEM Tools", "Incident Response", "Encryption", "Ethical Hacking"],
+    datasets: [
+      {
+        label: "Cybersecurity Analyst",
+        data: [90, 85, 80, 75, 70, 65],
+        backgroundColor: "rgba(34, 202, 236, 0.2)",
+        borderColor: "rgba(34, 202, 236, 1)",
+        borderWidth: 1,
+      },
+    ],
+  },
+  "Fullstack Developer": {
+    labels: ["HTML/CSS", "JavaScript", "React", "Node.js", "Databases", "DevOps"],
+    datasets: [
+      {
+        label: "Fullstack Developer",
+        data: [85, 90, 95, 90, 80, 75],
+        backgroundColor: "rgba(34, 202, 236, 0.2)",
+        borderColor: "rgba(34, 202, 236, 1)",
+        borderWidth: 2,
+      },
+    ],
+  },
+};
+
 
 export const mockBarData = [
   {
