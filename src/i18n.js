@@ -30,7 +30,8 @@ i18n
             supplyDemandTitleEnd:" Field in 2025",
             open:"Open Positions",
             seekers:"Job Seekers",
-            availablePositions:"Available Positions"
+            availablePositions:"Available Positions",
+            topSkills:"Top 6 skills in "
         },
       },
       fr: {
@@ -56,7 +57,8 @@ i18n
             supplyDemandTitleEnd:" en 2025",
             open: "Postes ouverts",
             seekers: "Chercheurs d'emploi",
-            availablePositions:"Postes disponibles"
+            availablePositions:"Postes disponibles",
+            topSkills:"Top 6 des compétences en "
         },
       },
     },
