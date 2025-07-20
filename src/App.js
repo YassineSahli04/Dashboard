@@ -20,7 +20,7 @@ function App() {
             <Sidebar isSidebar={isSidebar} />
             <main className="content">
               <Topbar setIsSidebar={setIsSidebar} />
-
+              
               <Routes>
                 <Route path="/" element={<Dashboard />} />
               </Routes>
