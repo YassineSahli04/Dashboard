@@ -181,48 +181,13 @@ const Dashboard = () => {
         {/* ROW 2 */}
         <Box
           gridColumn="span 8"
-          gridRow="span 3"
+          gridRow="span 4"
           backgroundColor={colors.primary[400]}
 
-        >
+        > 
           <LineChart />
         </Box>
 
-        <Box
-          gridColumn="span 5"
-          gridRow="span 3"
-          backgroundColor={colors.primary[400]}
-
-        >
-          <RadarChart />
-        </Box>
-
-        {/* ROW 3 */}
-        <Box
-          gridColumn="span 7"
-          gridRow="span 3"
-          backgroundColor={colors.primary[400]}
-          p="30px"
-        >
-          <PieChart />
-        </Box>
-
-        <Box
-          gridColumn="span 5"
-          gridRow="span 2"
-          backgroundColor={colors.primary[400]}
-        >
-          <Typography
-            variant="h5"
-            fontWeight="600"
-            sx={{ padding: "30px 30px 0 30px" }}
-          >
-            {t("topCitiesTitle")}
-          </Typography>
-          <Box height="250px" mt="-20px">
-            <BarChart isDashboard={true} />
-          </Box>
-        </Box>
         <Box
           gridColumn="span 4"
           gridRow="span 2"
@@ -239,6 +204,48 @@ const Dashboard = () => {
             <Report />
           </Box>
         </Box>
+
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          backgroundColor={colors.primary[400]}
+        >
+          <Typography
+            variant="h5"
+            fontWeight="600"
+            sx={{ padding: "30px 30px 0 30px" }}
+          >
+            {t("topCitiesTitle")}
+          </Typography>
+          <Box height="250px" mt="-20px">
+            <BarChart isDashboard={true} />
+          </Box>
+        </Box>
+
+ 
+
+        {/* ROW 3 */}
+
+       <Box
+          gridColumn="span 5"
+          gridRow="span 3"
+          backgroundColor={colors.primary[400]}
+
+        >
+          <RadarChart />
+        </Box>
+
+        <Box
+          gridColumn="span 7"
+          gridRow="span 3"
+          backgroundColor={colors.primary[400]}
+          p="30px"
+        >
+          <PieChart />
+        </Box>
+
+        
+
 
 
       </Box>

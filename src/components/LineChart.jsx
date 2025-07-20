@@ -48,7 +48,7 @@ export default function LineChart({ isCustomLineColors = false}){
   return (
     <>
     <Box
-      mt="25px"
+      mt="50px"
       p="0 30px"
       display="flex "
       justifyContent="space-between"
@@ -91,7 +91,7 @@ export default function LineChart({ isCustomLineColors = false}){
 </Box>
 
   </Box>
-  <Box height="350px" m="-20px 0 0 0" paddingLeft="25px">
+  <Box height="400px" m="35px 0 0 0" paddingLeft="25px">
         <ResponsiveLine 
         data={data[selectedYear]}
         theme={{
